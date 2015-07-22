@@ -23,8 +23,10 @@ grails.project.fork = [
     console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
 ]
 
+
 grails.project.dependency.resolver = "maven" // or ivy
-grails.project.dependency.resolution = {
+grails.project.dependency.resolution = 
+{
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
@@ -34,24 +36,38 @@ grails.project.dependency.resolution = {
     checksums true // Whether to verify checksums on resolve
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
-    repositories {
+    repositories 
+    {
         mavenLocal()
         mavenRepo ("http://nexus.ala.org.au/content/groups/public/") {
             updatePolicy 'always'
         }
     }
 
-    dependencies {
+    dependencies 
+    {
     }
 
-    plugins {
-        build ":release:3.0.1"
-        // plugins for the build system only
-        build ":tomcat:7.0.54"
-        compile ':cache:1.1.1'
-        compile ":cache-headers:1.1.6"
-        runtime ":resources:1.2.8"
-        runtime ":cached-resources:1.0"
-        runtime ":biocache-hubs:0.70"
+    plugins 
+    {
+	        build ":release:3.0.1"
+
+        	// plugins for the build system only
+        	build ":tomcat:7.0.54"
+        	compile ':cache:1.1.1'
+        	compile ":cache-headers:1.1.6"
+        	runtime ":resources:1.2.8"
+        	runtime ":cached-resources:1.0"
+
+		// Per compilar biocache-hubs en local
+
+        	//runtime ":biocache-hubs:0.70"
+		compile ":biocache-hubs:0.70"
+
+		//runtime ":hibernate:3.6.10.1"
+		//runtime ":ala-bootstrap2:2.2"
+
     }
 }
+
+grails.plugin.location.'biocache-hubs' = "/home/carles/git/biocache-hubs"
