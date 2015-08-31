@@ -62,8 +62,8 @@ grails.project.dependency.resolution =
 		// Per compilar biocache-hubs en local
 
         	//runtime ":biocache-hubs:0.70"
-		compile ":biocache-hubs:0.70"
-
+		//compile ":biocache-hubs:0.70"
+                compile ":biocache-hubs:0.72-SNAPSHOT"
 		//runtime ":hibernate:3.6.10.1"
 		//runtime ":ala-bootstrap2:2.2"
 
