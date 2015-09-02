@@ -10,77 +10,10 @@
 
     <title><g:layoutTitle /></title>
     <r:require modules="bootstrap2, hubCore" />
-    <style type="text/css">
 
-    body{	
-	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
-    	font-style: normal;
-    	font-variant: normal;
-        background-color: #ffffff !important;
-    }
-    #breadcrumb {
-        margin-top: 10px;
-    }
-    #main-content #searchInfoRow #customiseFacetsButton > .dropdown-menu {
-        background-color: #ffffff;
-    }
-
-    #footer {
-        margin: 20px;
-        padding-top: 10px;
-        border-top: 2px solid #059842;      
-        font-size: 12px;
-	text-align: center;
-    	margin-top: 30px;
-    	width: 100%;
-    	margin-left: -2px;
-    }
-
-    #content .nav-tabs > li.active > a {
-        background-color: #ffffff;
-    }
-    .nav {
-        margin-top: 20px;
-    }
-    body > #main-content {
-        margin-top: 0px;
-    }
-
-    img.logo{
-    height: 50px;
-    padding: 10px;
-}
-
-    </style>
     <r:script disposition='head'>
         // initialise plugins
         jQuery(function(){
-            // autocomplete on navbar search input
-            jQuery("form#search-form-2011 input#search-2011, form#search-inpage input#search, input#search-2013").autocomplete('http://bie.ala.org.au/search/auto.jsonp', {
-                extraParams: {limit: 100},
-                dataType: 'jsonp',
-                parse: function(data) {
-                    var rows = new Array();
-                    data = data.autoCompleteList;
-                    for(var i=0; i<data.length; i++) {
-                        rows[i] = {
-                            data:data[i],
-                            value: data[i].matchedNames[0],
-                            result: data[i].matchedNames[0]
-                        };
-                    }
-                    return rows;
-                },
-                matchSubset: false,
-                formatItem: function(row, i, n) {
-                    return row.matchedNames[0];
-                },
-                cacheLength: 10,
-                minChars: 3,
-                scroll: false,
-                max: 10,
-                selectFirst: false
-            });
 
             // Mobile/desktop toggle
             // TODO: set a cookie so user's choice is remembered across pages
@@ -101,29 +34,49 @@
             $('.helphover').popover({animation: true, trigger:'hover'});
         });
     </r:script>
+
     <r:layoutResources/>
+    <link rel="stylesheet" href="${resource(dir: 'css', file: 'biodiba.css')}" />
     <g:layoutHead />
+
 </head>
+
+
 <body class="${pageProperty(name:'body.class')?:'nav-collections'}" id="${pageProperty(name:'body.id')}" onload="${pageProperty(name:'body.onload')}">
 
-<div class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner ">
+
+<!-- <div class="navbar navbar-inverse navbar-static-top"> -->
+<div class="navbar navbar-static-top">
+    <div class="navbar-inner">
+
+	<header class="row-fluid">
+		<img src="http://parcs.diba.cat/documents/43788175/43882102/BannerConservacioBiodiversitat.jpg">
+	</header>
+
         <div class="container">
+
             <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="#">${raw(orgNameLong)}</a>
+
+            <!-- <a class="brand" href="#">${raw(orgNameLong)}</a> -->
+
             <div class="nav-collapse collapse">
+
+<!--
                 <p class="navbar-text pull-right">
                     <g:message code="generic.navbar01.label" default="Logged in as"/> <a href="#" class="navbar-link">${username}</a>
                 </p>
+-->
+
                 <ul class="nav">
                     <li class="active"><a href="#"><g:message code="generic.navbar02.li01" default="Home"/></a></li>
                     <li><a href="#about"><g:message code="generic.navbar02.li02" default="About"/></a></li>
                     <li><a href="#contact"><g:message code="generic.navbar02.li03" default="Contact"/></a></li>
                 </ul>
+
             </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
     </div><!--/.navbar-inner -->
