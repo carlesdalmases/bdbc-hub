@@ -1,0 +1,58 @@
+body
+{
+	font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif !important;
+	font-style: normal;
+	font-variant: normal;
+	background-color: #ffffff !important;
+}
+
+#breadcrumb
+{
+	margin-top: 10px;
+}
+
+#main-content #searchInfoRow #customiseFacetsButton > .dropdown-menu
+{
+	background-color: #ffffff;
+}
+
+#footer
+{
+	margin: 20px;
+	padding-top: 10px;
+	border-top: 2px solid #059842;
+	font-size: 12px;
+	text-align: center;
+	margin-top: 30px;
+	width: 100%;
+	margin-left: -2px;
+}
+
+#content .nav-tabs > li.active > a
+{
+	background-color: #ffffff;
+}
+
+.nav
+{
+	margin-top: 20px;
+}
+
+body > #main-content
+{
+	margin-top: 0px;
+}
+
+img.logo
+{
+	height: 50px;
+	padding: 10px;
+}
+
+.navbar-inner
+{
+	background-image: none;
+	background-color: #ffffff;
+	background-repeat: no-repeat;
+}
+
