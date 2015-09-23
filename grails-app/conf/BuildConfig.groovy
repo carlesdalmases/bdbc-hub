@@ -6,7 +6,10 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.plugins.dir="plugins"
+
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
+grails.project.war.file = "target/${appName}.war"
+
 //grails.plugin.location.'biocache-hubs' = "../biocache-hubs"
 
 grails.project.fork = [
@@ -71,3 +74,12 @@ grails.project.dependency.resolution =
 }
 
 grails.plugin.location.'biocache-hubs' = "/home/carles/git/biocache-hubs"
+
+
+
+// Copy generic-hub-config.properties to <<classes>> path
+grails.war.resources = { stagingDir, args ->
+      copy(todir: "${stagingDir}/WEB-INF/classes"){
+        fileset(dir:"config/",includes:"**")
+		}
+	}
