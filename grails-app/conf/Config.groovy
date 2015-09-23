@@ -11,25 +11,32 @@
 //    grails.config.locations << "file:" + System.properties["${appName}.config.location"]
 // }
 
-grails.project.groupId = "au.org.ala" // change this to alter the default package name and Maven publishing destination
-
-//default_config = "/data/${appName}/config/${appName}-config.properties"
-//default_config = "${userHome}/git/${appName}/config/${appName}-config.properties"
-default_config = "${userHome}/.grails/${appName}/config/${appName}-config.properties"
-
+// See environments section
+//default_config = "./config/${appName}-config.properties"
 
 if(!grails.config.locations || !(grails.config.locations instanceof List)) {
     grails.config.locations = []
 }
-if (new File(default_config).exists()) {
-    println "[${appName}] Including default configuration file: " + default_config;
-    grails.config.locations.add "file:" + default_config
-} else {
-    println "[${appName}] No external configuration file defined."
-}
 
-println "[${appName}] (*) grails.config.locations = ${grails.config.locations}"
-println "default_config = ${default_config}"
+//if (new File(default_config).exists()) {
+//    println "[${appName}]: Including default configuration file: " + default_config;
+//    grails.config.locations.add "file:" + default_config
+//} else {
+//    println "[${appName}]: No external configuration file defined."
+//}
+
+
+//grails.config.locations = ["classpath:${appName}-config.properties",
+//                           "file:./config/${appName}-config.properties"]
+//if (System.properties["${appName}.config.location"]) {
+//   grails.config.locations << "file:" + System.properties["${appName}.config.location"]
+//}
+
+//println "[${appName}]: (*) grails.config.locations = ${grails.config.locations}"
+//println "default_config: = ${default_config}"
+
+
+grails.project.groupId = "au.org.ala" // change this to alter the default package name and Maven publishing destination
 
 /******************************************************************************\
  *  SKINNING
@@ -128,18 +135,35 @@ environments {
 //        serverName='http://dev.ala.org.au:8080'
 //        security.cas.appServerName = serverName
 //        security.cas.contextPath = "/${appName}"
-        grails.resources.debug = true // cache & resources plugins
+
+	  default_config = "./config/${appName}-config.properties"
+
+		if (new File(default_config).exists()) 
+		{
+    			println "[${appName}]: Including default configuration file: " + default_config;
+    			grails.config.locations.add "file:" + default_config
+		} 
+		else 
+		{
+    			println "[${appName}]: No external configuration file defined."
+		}
+
+          grails.resources.debug = true // cache & resources plugins
     }
     test {
 //        grails.serverURL = 'http://biocache-test.ala.org.au'
 //        serverName='http://biocache-test.ala.org.au'
 //        security.cas.appServerName = serverName
-        //security.cas.contextPath = "/${appName}"
+//        security.cas.contextPath = "/${appName}"
     }
     production {
 //        grails.serverURL = 'http://biocache.ala.org.au'
 //        serverName='http://biocache.ala.org.au'
 //        security.cas.appServerName = serverName
+ 	  default_config = "${appName}-config.properties"
+          println "[${appName}]: Including default configuration file: " + default_config;
+	  //See BuildConfig.groovy
+	  grails.config.locations.add "classpath:${appName}-config.properties"
     }
 }
 
