@@ -47,40 +47,15 @@
 
 <!-- <div class="navbar navbar-inverse navbar-static-top"> -->
 <div class="navbar navbar-static-top">
-    <div class="navbar-inner">
+	<div class="navbar-inner">
+	        <div class="container-fluid">
+			<div> 
+				<img src="${resource(dir: 'images', file: 'banner_biodiba.jpg')}"  alt="">
+			</div>
+		</div> <!-- container-fluid -->		
+	</div> <!-- navbar-inner -->
+</div> <!-- navbar navbar-static-top -->
 
-	<header class="row-fluid">
-		<img src="http://parcs.diba.cat/documents/43788175/43882102/BannerConservacioBiodiversitat.jpg">
-	</header>
-
-        <div class="container">
-
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-
-            <!-- <a class="brand" href="#">${raw(orgNameLong)}</a> -->
-
-            <div class="nav-collapse collapse">
-
-<!--
-                <p class="navbar-text pull-right">
-                    <g:message code="generic.navbar01.label" default="Logged in as"/> <a href="#" class="navbar-link">${username}</a>
-                </p>
--->
-
-                <ul class="nav">
-                    <li class="active"><a href="#"><g:message code="generic.navbar02.li01" default="Home"/></a></li>
-                    <li><a href="#about"><g:message code="generic.navbar02.li02" default="About"/></a></li>
-                    <li><a href="#contact"><g:message code="generic.navbar02.li03" default="Contact"/></a></li>
-                </ul>
-
-            </div><!--/.nav-collapse -->
-        </div><!--/.container-fluid -->
-    </div><!--/.navbar-inner -->
-</div><!--/.navbar -->
 
 <div class="container" id="main-content">
     <g:layoutBody />
