@@ -7,7 +7,7 @@ modules = {
 
     generic {
         dependsOn 'bootstrap2', 'hubCore'
-        resource url: [dir:'css', file:'generic.css']
+        resource url: [dir:'css', file:'biodiba.css']
     }
 
 }
