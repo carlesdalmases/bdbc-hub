@@ -29,6 +29,7 @@
 
     body > #main-content {
         margin-top: 0px;
+        background-color: #ffffff;
     }
 
 #main-content #customiseFacetsButton > .dropdown-menu,
