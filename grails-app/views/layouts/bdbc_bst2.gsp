@@ -68,32 +68,28 @@
 
     <div class="clearfix"></div>
 
-	    <!--INICI menú principal WEB  -->
-            <div id="menuprin">
-                <div class="menupr" role="navigation">
-                  <div class="container" >
-                        <ul id="ul_menuprin" >
-                            <li class="span3 menu"><a href="">Idiomes<span class="caret"></span></a></li>
-                            <li class="span3 menu"><a href="">EL PORTAL</a></li>
-                            <li class="span3 menu"><a href="">WEB DE CONSERVACIÓ</a></li>
-                            <li class="span3 menu last"><a href="">CREDITS</a></li>
-                            <div class="clearfix"></div>
-                        </ul>
-                        <div class="clearfix"></div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="clearfix" id="submenu">
-                    <div class="submenu">
-                        <ul class="span3">
-                            <li class="first">Català</li>
-                            <li>Español</li>
-                            <li>English</li>
-                        </ul>
-                    </div>
-                </div>
-            </div><!--FI menú principal WEB  -->
+	<!--INICI menú principal WEB  -->
+     <div id="menuprin">
+         <div class="menupr">
+                 <ul id="ul_menuprin" class="nav" >
+                            <li class="span3"><a href="">EL PORTAL</a></li>
+                            <li class="span3"><a href="">WEB DE CONSERVACIÓ</a></li>
+                            <li class="span3"><a href="">CRÈDITS</a></li>
+                            <li class="span3 last dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="">Idiomes
+                                    <span id="idiomes" class="caret"></span>
+                                </a>
 
+                                    <ul class="span2 dropdown-menu">
+                                        <li class="first menu">Català</li>
+                                        <li class="menu">Español</li>
+                                        <li class="menu">English</li>
+                                    </ul>
+                            </li>
+                 </ul>
+         </div>
+     </div><!--FI menú principal WEB  -->
+     <div class="clearfix"></div>
 
 
 <!-- Menú mòbil -->
@@ -142,12 +138,9 @@
 <div class="clearfix"></div>
 
 
-<div class="${fluidLayout?'container-fluid':'container'}" id="main-content">
+<div class="${fluidLayout?'container-fluid':'container'}" id="main-content" style:"background-color:#FFFFFF">
     <g:layoutBody />
 </div><!--/.container-->
-
-
-
 
 <div class="clearfix"></div>
 
