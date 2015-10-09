@@ -79,7 +79,6 @@
                                 <a class="dropdown-toggle" data-toggle="dropdown" href="">Idiomes
                                     <span id="idiomes" class="caret"></span>
                                 </a>
-
                                     <ul class="span2 dropdown-menu">
                                         <li class="first menu">Català</li>
                                         <li class="menu">Español</li>
@@ -93,44 +92,53 @@
 
 
 <!-- Menú mòbil -->
-    <div id="menuprin_mobil">
-        <div class="navbar navbar-default" role="navigation">
-          <div class="container" >
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand">MENÚ</a>
-            </div>
-            <div class="navbar-collapse collapse">
+<div id="menuprin_mobil">
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar pull-left" data-toggle="collapse" data-target=".nav-collapse" style="float:left">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <!-- <a class="brand" href="#">Project name</a> -->
+
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+        <!-- .nav, .navbar-search, .navbar-form, etc -->
+          <div class="navbar">
               <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idiomes<span class="caret"></span></a>
-                  <ul class="dropdown-menu" role="menu">
-                    <li><a href="">Català</a></li>
-                    <li><a href="">Español</a></li>
-                    <li><a href="">English</a></li>
-               </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="http://www.diba.cat/temes">El Portal</a>
-                </li>
-                <li class="dropdown">
-                  <a href="http://www.diba.cat/municipis">Web de Conservació</a>
-                </li>
-                <li class="dropdown">
-                  <a href="https://seuelectronica.diba.cat">Credits</a>
-                </li>
+                  <li class="">
+                      <a href="">El Portal</a>
+                  </li>
 
+                  <li class="">
+                      <a href="">Web de Conservació</a>
+                  </li>
 
-              </ul>
-            </div><!--/.nav-collapse -->
+                  <li class="">
+                      <a href="">Credits</a>
+                  </li>
+
+                          <li class="">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Idiomes<span class="caret" id="idiomes"></span></a>
+                            <ul class="dropdown-menu">
+                              <li><a href="">Català</a></li>
+                              <li><a href="">Español</a></li>
+                              <li><a href="">English</a></li>
+                             </ul>
+                          </li>
+                        </ul>
           </div>
-        </div>
-    </div><!--FI menú principal MOBIL  -->
+      </div>
+    </div>
+  </div>
+</div>
+</div><!--FI menú principal MOBIL  -->
 
 
 <div class="clearfix"></div>
