@@ -6,11 +6,11 @@ grails.project.work.dir = "target/work"
 grails.project.target.level = 1.6
 grails.project.source.level = 1.6
 //grails.project.plugins.dir="plugins"
-
 //grails.project.war.file = "target/${appName}-${appVersion}.war"
 grails.project.war.file = "target/${appName}.war"
 
 //grails.plugin.location.'biocache-hubs' = "../biocache-hubs"
+grails.plugin.location.'lang-selector' = "plugins/lang-selector-0.3"
 
 grails.project.fork = [
     // configure settings for compilation JVM, note that if you alter the Groovy version forked compilation is required
@@ -26,10 +26,8 @@ grails.project.fork = [
     console: [maxMemory: 768, minMemory: 64, debug: false, maxPerm: 256]
 ]
 
-
 grails.project.dependency.resolver = "maven" // or ivy
-grails.project.dependency.resolution = 
-{
+grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
@@ -39,16 +37,14 @@ grails.project.dependency.resolution =
     checksums true // Whether to verify checksums on resolve
     legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
-    repositories 
-    {
+    repositories {
         mavenLocal()
         mavenRepo ("http://nexus.ala.org.au/content/groups/public/") {
             updatePolicy 'always'
         }
     }
 
-    dependencies 
-    {
+    dependencies {
     }
 
     plugins 
