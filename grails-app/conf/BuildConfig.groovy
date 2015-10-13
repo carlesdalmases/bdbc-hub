@@ -69,7 +69,7 @@ grails.project.dependency.resolution = {
     }
 }
 
-grails.plugin.location.'biocache-hubs' = "/home/carles/git/biocache-hubs"
+grails.plugin.location.'biocache-hubs' = "/home/carles/biodiba/biocache-hubs"
 
 
 
