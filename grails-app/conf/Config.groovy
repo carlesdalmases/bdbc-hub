@@ -41,8 +41,8 @@ grails.project.groupId = "au.org.ala" // change this to alter the default packag
 /******************************************************************************\
  *  SKINNING
 \******************************************************************************/
-skin.layout = 'generic'
-skin.orgNameLong = "Generic Data Portal"
+skin.layout = 'gbifes'
+skin.orgNameLong = ""
 skin.orgNameShort = "Occurrences"
 // whether crumb trail should include a home link that is external to this webabpp - ala.baseUrl is used if true
 skin.includeBaseUrl = true
@@ -109,7 +109,22 @@ grails {
         }
     }
 }
- 
+
+com.mfelix.grails.plugins.langSelector.lang.flags = ["es":"es",
+                                                     "en":"gb",
+                                                     "fr":"fr",
+                                                     "da":"dk",
+                                                     "de":"de",
+                                                     "it":"it",
+                                                     "ja":"jp",
+                                                     "nl":"nl",
+                                                     "ru":"ru",
+                                                     "th":"th",
+                                                     "zh":"cn",
+                                                     "pt":"pt",
+                                                     "ca":"catalonia"
+]
+
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'
