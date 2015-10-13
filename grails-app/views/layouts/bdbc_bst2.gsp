@@ -80,9 +80,9 @@
                                     <span id="idiomes" class="caret"></span>
                                 </a>
                                     <ul class="span2 dropdown-menu">
-                                        <li class="first menu">Català</li>
-                                        <li class="menu">Español</li>
-                                        <li class="menu">English</li>
+                                        <li class="first menu"><langs:selector langs="ca"/></li>
+                                        <li class="menu"><langs:selector langs="es"/></li>
+                                        <li class="menu"><langs:selector langs="en"/></li>
                                     </ul>
                             </li>
                  </ul>
