@@ -151,7 +151,8 @@ environments {
 //        security.cas.appServerName = serverName
 //        security.cas.contextPath = "/${appName}"
 
-	  default_config = "./config/${appName}-config.properties"
+	    default_config = "./config/${appName}-config.properties"
+        areaselector_config = "./config/${appName}-config-areaselector.groovy"
 
 		if (new File(default_config).exists()) 
 		{
@@ -163,7 +164,18 @@ environments {
     			println "[${appName}]: No external configuration file defined."
 		}
 
-          grails.resources.debug = true // cache & resources plugins
+        //Area selector config file
+        if (new File(areaselector_config).exists())
+        {
+            println "[${appName}]: Including area selector configuration file: " + areaselector_config;
+            grails.config.locations.add "file:" + areaselector_config
+        }
+        else
+        {
+            println "[${appName}]: No external area selector configuration file defined."
+        }
+
+        grails.resources.debug = true // cache & resources plugins
     }
     test {
 //        grails.serverURL = 'http://biocache-test.ala.org.au'
